@@ -13,12 +13,12 @@ class PainelSuperior extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.amber.shade100,
+      color: Colors.green.shade900,
       padding: const EdgeInsets.all(16),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text('Movimentos: $movimentos', style: const TextStyle(fontSize: 18)),
+          Text('Movimentos: $movimentos', style: const TextStyle(fontSize: 18, color: Colors.white)),
           ElevatedButton.icon(
             onPressed: onReiniciar,
             icon: const Icon(Icons.refresh),

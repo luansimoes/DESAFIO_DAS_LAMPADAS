@@ -94,7 +94,7 @@ class Grafo {
     double raio = 0.3,
   }) {
     posicoes = List.generate(numeroDeVertices, (i) {
-      final angulo = (2 * pi * i) / numeroDeVertices;
+      final angulo = (2 * pi * (i+1)) / numeroDeVertices;
       return Ponto(
         centroX + raio * cos(angulo),
         centroY + raio * sin(angulo),

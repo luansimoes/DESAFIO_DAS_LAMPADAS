@@ -31,7 +31,11 @@ class LampadaWidget extends StatelessWidget {
             Icon(
               //acesa ? Icons.lightbulb : Icons.lightbulb_outline,
               Icons.lightbulb,
-              color: acesa ? Colors.amber : Colors.blueGrey,
+              color: acesa ? Colors.amber : const Color.fromARGB(255, 7, 41, 12),
+              shadows: [Shadow(
+                color: const Color.fromARGB(255, 7, 41, 12),
+                blurRadius: 10,
+              )],
               size: escala * tamanhoTela,
             ),
             //Text('L$indice'),

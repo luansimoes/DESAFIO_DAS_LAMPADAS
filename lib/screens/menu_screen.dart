@@ -11,7 +11,7 @@ class MenuScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Desafio das Lâmpadas'),
+        title: Text('Desafio das Lâmpadas', style: TextStyle(fontWeight: FontWeight.bold,  color: Colors.green.shade900),),
         centerTitle: true,
       ),
       body: ListView.builder(
@@ -21,8 +21,8 @@ class MenuScreen extends StatelessWidget {
           return Card(
             margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: ListTile(
-              title: Text(desafio.nome),
-              trailing: const Icon(Icons.play_arrow),
+              title: Text(desafio.nome, style: TextStyle(color: Colors.green.shade900)),
+              trailing: Icon(Icons.play_arrow, color: Colors.green.shade900,),
               onTap: () {
                 Navigator.push(
                   context,

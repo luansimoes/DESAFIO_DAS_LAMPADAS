@@ -79,7 +79,7 @@ class _JogoScreenState extends State<JogoScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(desafio.nome),
+        title: Text(desafio.nome, style: TextStyle(color:Colors.green.shade900, fontWeight: FontWeight.bold),),
         centerTitle: true,
       ),
       body: Column(
