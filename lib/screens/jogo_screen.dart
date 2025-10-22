@@ -61,21 +61,6 @@ class _JogoScreenState extends State<JogoScreen> {
 
     final posicoes = grafo.posicoes;
 
-    // calcula os limites do grafo
-    final minX = posicoes.map((p) => p.x).reduce((a, b) => a < b ? a : b);
-    final maxX = posicoes.map((p) => p.x).reduce((a, b) => a > b ? a : b);
-    final minY = posicoes.map((p) => p.y).reduce((a, b) => a < b ? a : b);
-    final maxY = posicoes.map((p) => p.y).reduce((a, b) => a > b ? a : b);
-
-    final larguraGrafo = maxX - minX;
-    final alturaGrafo = maxY - minY;
-
-    //final larguraTela = MediaQuery.of(context).size.width;
-    //final alturaTela = MediaQuery.of(context).size.height;
-
-    //final double offsetX = ((larguraTela*0.5) - larguraGrafo) / 2;
-    //final double offsetY = ((alturaTela*0.8) - alturaGrafo) / 2;
-
 
     return Scaffold(
       appBar: AppBar(
