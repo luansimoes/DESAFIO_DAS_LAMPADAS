@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:desafio_das_lampadas/models/grafo.dart';
 import 'package:flutter/material.dart';
 import '../models/desafio.dart';
-import '../models/grafo.dart';
 import '../widgets/painel_superior.dart';
 import '../widgets/lampada_widget.dart';
 import '../widgets/aresta_widget.dart';
@@ -20,6 +19,7 @@ class JogoScreen extends StatefulWidget {
 class _JogoScreenState extends State<JogoScreen> {
 
   late Desafio desafio;
+  int? ultimaLampadaClicada;
 
   @override
   void initState() {
@@ -121,6 +121,7 @@ class _JogoScreenState extends State<JogoScreen> {
                         LampadaWidget(
                           indice: i,
                           acesa: grafo.estados[i],
+                          destaque: i == ultimaLampadaClicada,
                           escala: 1 / (sqrt(grafo.numeroDeVertices) + 5),
                           tamanhoTela: min(alturaTela, larguraTela),
                           posicao: Ponto(
@@ -129,6 +130,7 @@ class _JogoScreenState extends State<JogoScreen> {
                           ),
                           onPress: () {
                             setState(() {
+                              ultimaLampadaClicada = i;
                               desafio.jogar(i);
                             });
                             _verificarVitoria(context);
